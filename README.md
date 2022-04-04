@@ -1,6 +1,8 @@
 # Learning to Disentangle Scenes for Person Re-identification
 ![LICENSE](https://img.shields.io/badge/license-GPL%202.0-green) ![Python](https://img.shields.io/badge/python-3.7-blue.svg) ![pytorch](https://img.shields.io/badge/pytorch-1.6.0-orange) 
 
+[![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-to-disentangle-scenes-for-person-re/person-re-identification-on-p-dukemtmc-reid)](https://paperswithcode.com/sota/person-re-identification-on-p-dukemtmc-reid?p=learning-to-disentangle-scenes-for-person-re) [![PWC](https://img.shields.io/endpoint.svg?url=https://paperswithcode.com/badge/learning-to-disentangle-scenes-for-person-re/person-re-identification-on-occluded-dukemtmc)](https://paperswithcode.com/sota/person-re-identification-on-occluded-dukemtmc?p=learning-to-disentangle-scenes-for-person-re)
+
 Implementation of the proposed LDS. For the preprint version, please refer to [[Arxiv]](https://arxiv.org/pdf/2111.05476.pdf).
 
 The complete code is available on https://git.openi.org.cn/zangxh/LDS.git.
