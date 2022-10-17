@@ -1,0 +1,39 @@
+_BASE_: "../../../../configs/Base-SBS.yml"
+
+MODEL:
+  BACKBONE:
+    WITH_IBN: True
+
+  NUM_MODEL: 3
+  HEADS:
+    # Market1501 751, DukeMTMC 702, MSMT17 1041
+    NUM_CLASSES: 702
+
+INPUT:
+  REA:
+    ENABLED: True
+    PROB: 1.0
+  RSL:
+    TYPE: "RandomScale"
+    ENABLED: True
+    PROB: 1.0
+    SCALE: (0.8,1.1)
+    THRESHOLD: 0.9
+
+DML:
+  VARIATION: "lds"                    # lds, dml
+  MUTUAL_MASTER_SERVANT: "mutual"     # mutual, master_servant
+  TARGET_TRANSFORM: ("RandomErasing", "RandomScale",)
+  SYN_TYPE: "homologous"              # homologous, heterologous
+
+#SOLVER:
+#  CHECKPOINT_PERIOD: 1
+
+TEST:
+  EVAL_PERIOD: 10
+
+DATASETS:
+  NAMES: ("P_DukeMTMC_ReID",)
+  TESTS: ("P_DukeMTMC_ReID",)
+
+OUTPUT_DIR: "projects/LDS/logs/P_DukeMTMC_ReID/LDS_3Branch_mutual_homologous"
